@@ -1,0 +1,299 @@
+/*!
+ * Anemone Theme v1.0
+ * Copyright 2019 littlehera
+ * Licensed under MIT (https://github.com/littlehera/anemone-theme/blob/master/LICENSE)
+ */
+
+/*HTML ELEMENTS/CONTAINERS*/
+* {
+  box-sizing: border-box;
+}
+
+body{
+  margin: 0px;
+  font-family: sans-serif;
+}
+
+nav{
+  position: fixed;
+  height: 30px;
+  width: 100%;
+  background-color: #0000009e;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+}
+
+nav li{
+  float: left;
+  padding: 5px;
+  color: white;
+  list-style: none;
+}
+
+nav a{
+  color: white;
+  text-decoration: none;
+}
+
+nav .logo{
+  float:left;
+  color: white;
+  padding: 5px;
+}
+
+nav .nav-links{
+  float: right;
+}
+
+section{
+  width: 100%;
+  margin: 0px;
+}
+
+footer{
+  bottom:0;
+  color:white;
+  height:20px;
+  text-align: center;
+  background:#000000a1;
+}
+
+h1,h2,h3,h4,h5,h6{
+  padding:5px;
+  margin-block-start: 0px;
+  margin-block-end: 0px;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+}
+
+table{
+}
+
+tr{
+
+}
+td{
+  padding: 5px;
+}
+
+/*SECTION elements*/
+
+.page-content{
+}
+
+.header{
+  min-height: 300px;
+  text-align: center;
+  /*background-image: url('../pictures/computer-cup-desk-434337.jpg');
+  background-size: cover;*/
+  background-color: #2b414cdb;
+  background-blend-mode: overlay;
+  padding:30px 50px;
+
+}
+
+.header .header-text{
+  padding: 30px 50px;
+  color:white;
+}
+
+.header .title{
+  margin-top:50px;
+}
+
+.header .subtitle{
+}
+
+.gray-section{
+  margin:10px 0px;
+  background-color:#cecece;
+  padding:30px 60px;
+
+}
+
+.dark-section{
+  background-color:#24405f;
+}
+
+.medium-section{
+  background-color:#3e787b;
+  padding:30px 60px;
+}
+
+/*div containers*/
+.white-card{
+  background-color: white;
+  border-style: solid;
+  border-color:gray;
+  padding:10px 20px;
+  border-width: thin;
+  margin: 5px 0px;
+  min-height: 150px;
+}
+
+.white-card-large{
+  background-color: white;
+  border-style: solid;
+  border-color:gray;
+  padding:10px 20px;
+  border-width: thin;
+  margin: 5px 5px;
+  min-height: 310px;
+}
+
+.image-card{
+  float: left;
+  max-height:160px;
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  background-size: cover;
+  background-blend-mode: overlay;
+  background-color: #24405f;
+}
+
+.image-card-title{
+  position:relative;
+  top:60px;
+  left: 50px;
+  color:white;
+  height: 30px;
+}
+
+.overlay {
+  background-color: #008CBA;
+  position: relative;
+  top:-38px;
+  left:100%;
+  right: 0;
+  bottom:0;
+  width: 0%;
+  height: 170px;
+  transition: 0.5s ease;
+  text-overflow: ellipsis;
+}
+
+.image-card:hover .overlay {
+  width: 100%;
+  left:0;
+  text-overflow: ellipsis;
+}
+
+.image-card:hover .image-card-description{
+  -webkit-transition: opacity 2.5s; /* Safari */
+  -webkit-transition-delay: 1.5s; /* Safari */
+  transition-delay: 1.5s;
+  transition: opacity 2.5s ease;
+  opacity:1;
+}
+
+.image-card-description{
+  height: 100%;
+  padding: 5px 20px;
+  color: white;
+  font-size: 20px;
+  opacity:0;
+}
+
+/*Icons and other Elements*/
+
+.star-full{
+  font-size: 12px;
+  color:blue;
+}
+
+.star-empty{
+  font-size: 12px;
+  color:gray;
+}
+
+
+/*ALIGNMENT*/
+.center_elements{
+  text-align: center;
+  align-self: center;
+  align-content: center;
+}
+
+.center_self{
+  align-self: center;
+  margin: auto auto;
+}
+/*FORM ELEMENTS*/
+
+input{
+  width: -webkit-fill-available;
+  padding:5px;
+  border-radius: 3px;
+  border-color: white;
+  border-style: solid;
+  margin:5px;
+}
+
+textarea{
+  width: -webkit-fill-available;
+  padding:5px;
+  border-radius: 3px;
+  border-color: white;
+  border-style: solid;
+  margin:5px;
+  min-height: 150px;
+  font-family: sans-serif;
+}
+
+.button-medium{
+  padding: 5px 21px;
+  color: white;
+  background: #3e787b;
+  border-radius: 3px;
+  border-color: white;
+  border-style: solid;
+  margin:5px auto;
+}
+
+/** COLUMN SIZING AND MEDIA QUERIES**/
+.row{
+/*  margin: 5px;*/
+}
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+/*for phones*/
+[class*="col-"] {
+  width: 100%;
+  float: left;
+}
+@media only screen and (min-width: 600px) {
+  /* For tablets: */
+  .col-md-1 {width: 8.33%;}
+  .col-md-2 {width: 16.66%;}
+  .col-md-3 {width: 25%;}
+  .col-md-4 {width: 33.33%;}
+  .col-md-5 {width: 41.66%;}
+  .col-md-6 {width: 50%;}
+  .col-md-7 {width: 58.33%;}
+  .col-md-8 {width: 66.66%;}
+  .col-md-9 {width: 75%;}
+  .col-md-10 {width: 83.33%;}
+  .col-md-11 {width: 91.66%;}
+  .col-md-12 {width: 100%;}
+}
+@media only screen and (min-width: 768px) {
+  /* For desktop: */
+  .col-1 {width: 8.33%;}
+  .col-2 {width: 16.66%;}
+  .col-3 {width: 25%;}
+  .col-4 {width: 33.33%;}
+  .col-5 {width: 41.66%;}
+  .col-6 {width: 50%;}
+  .col-7 {width: 58.33%;}
+  .col-8 {width: 66.66%;}
+  .col-9 {width: 75%;}
+  .col-10 {width: 83.33%;}
+  .col-11 {width: 91.66%;}
+  .col-12 {width: 100%;}
+}
