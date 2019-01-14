@@ -11,7 +11,8 @@
 
 body{
   margin: 0px;
-  font-family: sans-serif;
+  font-family: 'Sarabun', 'Helvetica', sans-serif;
+  font-size: 14px;
 }
 
 nav{
@@ -47,6 +48,11 @@ nav .nav-links{
   float: right;
 }
 
+.nav-links i{
+  color:white;
+  padding:5px;
+}
+
 section{
   width: 100%;
   margin: 0px;
@@ -61,6 +67,7 @@ footer{
 }
 
 h1,h2,h3,h4,h5,h6{
+  font-family: 'Segoe UI Light', 'Sarabun',sans-serif;
   padding:5px;
   margin-block-start: 0px;
   margin-block-end: 0px;
@@ -68,14 +75,42 @@ h1,h2,h3,h4,h5,h6{
   margin-inline-end: 0px;
 }
 
+h1{
+  font-size: 46px;
+}
+
+h2{
+  font-size: 38px;
+}
+
+h3{
+  font-size: 30px;
+}
+
+h4{
+  font-size: 24px;
+}
+
+h5{
+  font-size: 20px;
+}
+
+h6{
+  font-size: 18px;
+}
 table{
+  width: inherit;
 }
 
 tr{
-
+  width: inherit;
+  text-align: justify;
 }
 td{
   padding: 5px;
+}
+th{
+  text-align: left;
 }
 
 /*SECTION elements*/
@@ -84,10 +119,9 @@ td{
 }
 
 .header{
-  min-height: 300px;
+  min-height: 500px;
   text-align: center;
-  /*background-image: url('../pictures/computer-cup-desk-434337.jpg');
-  background-size: cover;*/
+  background-size: cover;
   background-color: #2b414cdb;
   background-blend-mode: overlay;
   padding:30px 50px;
@@ -100,25 +134,36 @@ td{
 }
 
 .header .title{
-  margin-top:50px;
+  font-family: 'Segoe UI Regular', 'Sarabun', 'Helvetica',sans-serif;
+  margin-top: 60px;
+  font-weight: bolder;
 }
 
 .header .subtitle{
+  opacity: 0.6;
 }
 
 .gray-section{
   margin:10px 0px;
-  background-color:#cecece;
+  background-color:#e1e1e1;
   padding:30px 60px;
+  font-size: 14px;
+}
 
+.gray-section p{
+  color:#565656;
 }
 
 .dark-section{
   background-color:#24405f;
 }
 
+.white-text{
+  color:white;
+}
+
 .medium-section{
-  background-color:#3e787b;
+  background-color:#065370;
   padding:30px 60px;
 }
 
@@ -129,8 +174,9 @@ td{
   border-color:gray;
   padding:10px 20px;
   border-width: thin;
-  margin: 5px 0px;
-  min-height: 150px;
+  /*margin: 5px 0px;*/
+  height: 210px;
+  overflow: hidden;
 }
 
 .white-card-large{
@@ -139,8 +185,13 @@ td{
   border-color:gray;
   padding:10px 20px;
   border-width: thin;
-  margin: 5px 5px;
-  min-height: 310px;
+  /*margin: 5px 5px;*/
+  min-height: 425px;
+}
+.white-card::after {
+  content: "";
+  clear: both;
+  display: table;
 }
 
 .image-card{
@@ -155,11 +206,12 @@ td{
 }
 
 .image-card-title{
+  /*TODO: update this to prevent overlay from adjusting*/
   position:relative;
   top:60px;
-  left: 50px;
+  margin-left:50px;
   color:white;
-  height: 30px;
+  max-width: 200px;
 }
 
 .overlay {
@@ -187,6 +239,7 @@ td{
   transition-delay: 1.5s;
   transition: opacity 2.5s ease;
   opacity:1;
+  font-size: 14px;
 }
 
 .image-card-description{
@@ -199,25 +252,27 @@ td{
 
 /*Icons and other Elements*/
 
-.star-full{
+.email{
+    text-decoration: none;
+}
+.star-full, .star-empty{
   font-size: 12px;
-  color:blue;
+  color:#8dcce4;
 }
 
 .star-empty{
-  font-size: 12px;
-  color:gray;
+  color:#e1e1e1;
 }
 
 
 /*ALIGNMENT*/
-.center_elements{
+.center-elements{
   text-align: center;
   align-self: center;
   align-content: center;
 }
 
-.center_self{
+.center-self{
   align-self: center;
   margin: auto auto;
 }
@@ -255,18 +310,34 @@ textarea{
 
 /** COLUMN SIZING AND MEDIA QUERIES**/
 .row{
-/*  margin: 5px;*/
+ padding: 5px;
 }
 .row::after {
   content: "";
   clear: both;
   display: table;
 }
-/*for phones*/
+/*for all*/
 [class*="col-"] {
   width: 100%;
   float: left;
 }
+@media only screen and (max-width: 600px) {
+  /* For phones: */
+  .nav-links .link-text{
+    display: none;
+  }
+  .white-card{
+    height:auto;
+  }
+  .white-card-large{
+    height:auto;
+  }
+  .star-full, .star-empty{
+    font-size:11px
+  }
+}
+
 @media only screen and (min-width: 600px) {
   /* For tablets: */
   .col-md-1 {width: 8.33%;}
