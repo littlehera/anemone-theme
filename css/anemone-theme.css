@@ -9,9 +9,13 @@
   box-sizing: border-box;
 }
 
+html{
+  scroll-behavior: smooth;
+}
+
 body{
   margin: 0px;
-  font-family: 'Sarabun', 'Helvetica', sans-serif;
+  font-family: 'Thasadith','Segoe UI Light', 'Helvetica', sans-serif;
   font-size: 14px;
 }
 
@@ -61,13 +65,13 @@ section{
 footer{
   bottom:0;
   color:white;
-  height:20px;
+  padding:10px;
   text-align: center;
-  background:#000000a1;
+  background:#0b2d3a;
 }
 
 h1,h2,h3,h4,h5,h6{
-  font-family: 'Segoe UI Light', 'Sarabun',sans-serif;
+  font-family: 'Segoe UI Light', 'Ubuntu Condensed', 'Sarabun',sans-serif;
   padding:5px;
   margin-block-start: 0px;
   margin-block-end: 0px;
@@ -80,11 +84,11 @@ h1{
 }
 
 h2{
-  font-size: 38px;
+  font-size: 30px;
 }
 
 h3{
-  font-size: 30px;
+  font-size: 28px;
 }
 
 h4{
@@ -104,10 +108,9 @@ table{
 
 tr{
   width: inherit;
-  text-align: justify;
 }
 td{
-  padding: 5px;
+  padding: 3px;
 }
 th{
   text-align: left;
@@ -119,18 +122,22 @@ th{
 }
 
 .header{
-  min-height: 500px;
   text-align: center;
   background-size: cover;
   background-color: #2b414cdb;
   background-blend-mode: overlay;
-  padding:30px 50px;
-
+  padding: 30px 50px;
+  display: block;
+  margin: auto auto;
 }
 
 .header .header-text{
-  padding: 30px 50px;
+  margin: 50px 50px;
   color:white;
+}
+
+.subtitle{
+  padding:5px;
 }
 
 .header .title{
@@ -169,24 +176,25 @@ th{
 
 /*div containers*/
 .white-card{
+  color:#444444;
   background-color: white;
   border-style: solid;
   border-color:gray;
   padding:10px 20px;
   border-width: thin;
-  /*margin: 5px 0px;*/
   height: 210px;
   overflow: hidden;
 }
 
 .white-card-large{
+  color:#444444;
   background-color: white;
   border-style: solid;
   border-color:gray;
   padding:10px 20px;
   border-width: thin;
   /*margin: 5px 5px;*/
-  min-height: 425px;
+  min-height: 430px;
 }
 .white-card::after {
   content: "";
@@ -208,16 +216,17 @@ th{
 .image-card-title{
   /*TODO: update this to prevent overlay from adjusting*/
   position:relative;
-  top:60px;
+  top:-115px;
   margin-left:50px;
   color:white;
-  max-width: 200px;
+  opacity:1;
+  -webkit-transition: opacity .3s; /* Safari */
+  transition: opacity .3s ease;
 }
 
 .overlay {
-  background-color: #008CBA;
+  background-color: #0952a2ad;
   position: relative;
-  top:-38px;
   left:100%;
   right: 0;
   bottom:0;
@@ -228,25 +237,28 @@ th{
 }
 
 .image-card:hover .overlay {
-  width: 100%;
+  width:100%;
   left:0;
   text-overflow: ellipsis;
 }
 
+.image-card:hover .image-card-title {
+  opacity:0;
+}
+
 .image-card:hover .image-card-description{
-  -webkit-transition: opacity 2.5s; /* Safari */
+  -webkit-transition: opacity 2.3s; /* Safari */
   -webkit-transition-delay: 1.5s; /* Safari */
   transition-delay: 1.5s;
-  transition: opacity 2.5s ease;
+  transition: opacity 2.3s ease;
   opacity:1;
-  font-size: 14px;
 }
 
 .image-card-description{
   height: 100%;
   padding: 5px 20px;
   color: white;
-  font-size: 20px;
+  font-size: 14px;
   opacity:0;
 }
 
@@ -255,17 +267,18 @@ th{
 .email{
     text-decoration: none;
 }
-.star-full, .star-empty{
+.star-full{
   font-size: 12px;
-  color:#8dcce4;
+  color:#0d87b5;
 }
 
 .star-empty{
-  color:#e1e1e1;
+  font-size: 12px;
+  color:#b5b5b5;
 }
 
 
-/*ALIGNMENT*/
+/*ALIGNMENT and SPACING*/
 .center-elements{
   text-align: center;
   align-self: center;
@@ -276,11 +289,16 @@ th{
   align-self: center;
   margin: auto auto;
 }
+
+.increased_horizontal_padding{
+  padding:0px 30px;
+}
+
 /*FORM ELEMENTS*/
 
 input{
   width: -webkit-fill-available;
-  padding:5px;
+  padding:10px;
   border-radius: 3px;
   border-color: white;
   border-style: solid;
@@ -301,7 +319,17 @@ textarea{
 .button-medium{
   padding: 5px 21px;
   color: white;
-  background: #3e787b;
+  background: none;
+  border-radius: 3px;
+  border-color: white;
+  border-style: solid;
+  margin:5px auto;
+}
+
+.button-medium:hover{
+  padding: 5px 21px;
+  color: #0e7298;
+  background: white;
   border-radius: 3px;
   border-color: white;
   border-style: solid;
@@ -324,17 +352,34 @@ textarea{
 }
 @media only screen and (max-width: 600px) {
   /* For phones: */
+  .header{
+    padding:10px;
+  }
   .nav-links .link-text{
     display: none;
   }
+  .gray-section{
+    padding:30px 30px;
+  }
+  .medium-section{
+    padding:30px 30px;
+  }
   .white-card{
     height:auto;
+    padding:8px;
   }
   .white-card-large{
-    height:auto;
+    min-height:auto;
+    padding:8px;
   }
   .star-full, .star-empty{
     font-size:11px
+  }
+  .image-card-title{
+    max-width: 200px;
+  }
+  .increased_horizontal_padding{
+    padding:0px 5px;
   }
 }
 
@@ -352,6 +397,12 @@ textarea{
   .col-md-10 {width: 83.33%;}
   .col-md-11 {width: 91.66%;}
   .col-md-12 {width: 100%;}
+  .white-card{
+    padding:8px;
+  }
+  .white-card-large{
+    padding:8px;
+  }
 }
 @media only screen and (min-width: 768px) {
   /* For desktop: */
