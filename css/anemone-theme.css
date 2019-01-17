@@ -196,15 +196,19 @@ th{
 
 .icon-card{
   height: 200px;
+  width: 100%;
   margin: 100px 0;
+  float: left;
 }
 
 .icon-card .float-left{
   float: left;
+  text-align: left;
 }
 
 .icon-card .float-right{
   float: right!important;
+  text-align: right;
 }
 
 .icon-card img{
@@ -221,6 +225,7 @@ th{
 
 .icon-card .card-description{
   margin: 0px 25px 0px 25px;
+  max-width: 400px;
 }
 
 .dark-section{
@@ -382,14 +387,15 @@ textarea{
 
 .button{
   padding: 5px 21px;
-  border-radius: 3px;
   border-style: solid;
+  border-width: 1px;
   margin:5px auto;
-  text-decoration: none'
+  text-decoration: none;
 }
 
 .button-white{
   color: white;
+  border-radius: 3px;
   background: none;
   border-color: white;
 }
@@ -409,9 +415,9 @@ textarea{
 }
 
 .button-light:hover{
-  color: white;
-  background: #8eb4d6;
-  border-color: #7ca8d0;
+  color: #5895cb;
+  background: none;
+  border-color: #5895cb;
 }
 
 /** COLUMN SIZING AND MEDIA QUERIES**/
