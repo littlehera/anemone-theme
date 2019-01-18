@@ -1,3 +1,7 @@
+window.addEventListener('scroll', unhide_icon_cards, false);
+document.addEventListener('click',click_handler,false)
+
+
 /*
 Custom Functions
 */
@@ -18,7 +22,7 @@ function set_links_inactive(target_url){
 }
 
 function click_handler(e){
-  console.log(e.target);
+  //console.log(e.target);
   var element_href = e.target.getAttribute('href');
   var parent_href=e.target.parentNode.getAttribute('href');
   //console.log("E:"+element_href+" | P:"+parent_href);
@@ -26,7 +30,17 @@ function click_handler(e){
   set_links_inactive(target_url);
  //set_links_inactive(e.target.textContent);
 }
-document.addEventListener('click',click_handler,false)
+
+function unhide_icon_cards(){
+  var icon_cards = document.getElementsByClassName('icon-card');
+  for(var i=0;i<icon_cards.length;i++){
+    //console.log(icon_cards[i]);
+    var show_card = isScrolledIntoView(icon_cards[i]);
+    if (show_card){
+      icon_cards[i].className = "icon-card set-visible"
+    }
+  }
+}
 
 /*
 function handler(e){
@@ -38,3 +52,18 @@ function handler(e){
 }
 document.addEventListener('click',handler,false)
 */
+
+
+
+
+function isScrolledIntoView(el) {
+    var rect = el.getBoundingClientRect();
+    var elemTop = rect.top;
+    var elemBottom = rect.bottom;
+
+    // Only completely visible elements return true:
+    var isVisible = (elemTop >= 0) && (elemBottom <= window.innerHeight);
+    // Partially visible elements return true:
+    //isVisible = elemTop < window.innerHeight && elemBottom >= 0;
+    return isVisible;
+}
