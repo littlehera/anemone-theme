@@ -207,13 +207,14 @@ th{
 }
 
 .icon-card .float-right{
-  float: right!important;
+  float: right;
   text-align: right;
 }
 
 .icon-card img{
   width: 200px;
   height: 200px;
+  box-shadow: 0px 5px 5px #b3b3b3
 }
 
 .icon-card i{
@@ -468,6 +469,29 @@ textarea{
   .increased_horizontal_padding{
     padding:0px 5px;
   }
+
+  .icon-card{
+    height: auto;
+    margin: 50px 0;
+  }
+  .icon-card img {
+    /*
+    width: 40%;
+    height: auto;
+    margin-left: 30%;*/
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .icon-card .card-description{
+    width: 100%;
+    margin:10px 0 0 0;
+    text-align: center;
+  }
+  .float-left, .float-right{
+    float:unset!important;
+  }
+
 }
 
 @media only screen and (min-width: 600px) {
@@ -490,6 +514,20 @@ textarea{
   .white-card-large{
     padding:8px;
   }
+  .nav-links .link-text{
+    display: none;
+  }
+  .icon-card{
+    height: auto;
+  }
+  .icon-card img {
+    width:40%;
+    height:auto;
+  }
+  .icon-card .card-description{
+    width: 50%;
+  }
+
 }
 @media only screen and (min-width: 768px) {
   /* For desktop: */
@@ -505,4 +543,26 @@ textarea{
   .col-10 {width: 83.33%;}
   .col-11 {width: 91.66%;}
   .col-12 {width: 100%;}
+
+  .icon-card img{
+    width: 200px;
+    height: 200px;
+    box-shadow: 0px 5px 5px #b3b3b3
+  }
+
+  .nav-links .link-text{
+    display: initial;
+  }
+
+  .icon-card i{
+    width: 200px;
+    font-size: 175px;
+    height: 200px;
+    color: #0f87b5;
+  }
+
+  .icon-card .card-description{
+    margin: 0px 25px 0px 25px;
+    max-width: 400px;
+  }
 }
