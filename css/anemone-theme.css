@@ -143,6 +143,7 @@ th{
   text-align: left;
 }
 
+
 /*SECTION elements*/
 
 .page-content{
@@ -194,43 +195,6 @@ th{
   font-size: 16px;
 }
 
-.icon-card{
-  opacity: 0;
-  height: 200px;
-  width: 100%;
-  margin: 100px 0;
-  float: left;
-}
-
-.icon-card .float-left{
-  float: left;
-  text-align: left;
-}
-
-.icon-card .float-right{
-  float: right;
-  text-align: right;
-}
-
-.icon-card img{
-  width: 200px;
-  height: 200px;
-  box-shadow: 0px 5px 5px #b3b3b3
-}
-
-.icon-card i{
-  width: 200px;
-  font-size: 175px;
-  height: 200px;
-  color: #0f87b5;
-  text-align: center!important;
-}
-
-.icon-card .card-description{
-  margin: 0px 25px 0px 25px;
-  max-width: 400px;
-}
-
 .dark-section{
   background-color:#24405f;
   padding: 30px 0px;
@@ -273,6 +237,52 @@ th{
   display: table;
 }
 
+.icon-card{
+  opacity: 0;
+  height: 200px;
+  width: 100%;
+  margin: 100px 0;
+  float: left;
+}
+
+.icon-card .float-left{
+  float: left;
+  text-align: left;
+}
+
+.icon-card .float-right{
+  float: right;
+  text-align: right;
+}
+
+.icon-card img{
+  width: 200px;
+  height: 200px;
+  box-shadow: 0px 5px 5px #b3b3b3
+}
+
+.icon-card i{
+  width: 200px;
+  font-size: 175px;
+  height: 200px;
+  color: #0f87b5;
+  text-align: center!important;
+}
+
+.icon-card .card-description{
+  margin: 0px 25px 0px 25px;
+  max-width: 400px;
+}
+
+.icon-card button>i{
+  font-size: unset;
+  height: inherit;
+  width: inherit;
+  margin: 0px 5px 0px 0px;
+  color: inherit;
+}
+
+
 .image-card{
   float: left;
   max-height:160px;
@@ -285,7 +295,6 @@ th{
 }
 
 .image-card-title{
-  /*TODO: update this to prevent overlay from adjusting*/
   position:relative;
   top:-115px;
   margin-left:50px;
@@ -415,7 +424,6 @@ textarea{
   background-color: white;
 }
 
-/*TODO: change the colors for button-light*/
 .button-light{
   color: white;
   background: #5895cb;
