@@ -11,12 +11,22 @@ function set_links_inactive(target_url){
   var x = document.getElementsByTagName('a');
   for (i = 0; i < x.length; i++) {
     var current_url = x[i].getAttribute('href');
+    var current_class = x[i].className;
+    var class_list = current_class.split(' ');
     if(target_url!==current_url){
-      if(!current_url.includes('mailto'))
-        x[i].setAttribute('class','');
+      //console.log(class_list);
+      if(!current_url.includes('mailto')){
+        if(class_list.indexOf('active') != -1){
+            class_list[class_list.indexOf('active')]="";
+            var new_class = class_list.join(' ');
+            console.log(new_class);
+            x[i].setAttribute('class', new_class);
+        }
+      }
     }
     else{
-      x[i].setAttribute('class',"active");
+      var new_class = current_class + " active";
+      x[i].setAttribute('class',new_class);
     }
   }
 }

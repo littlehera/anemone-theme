@@ -363,6 +363,37 @@ th{
   transition: opacity 0.3s linear;
 }
 
+.icon-circle{
+  padding: 10px;
+  width: 50px;
+  height: 50px;
+  background:white;
+  text-align: center;
+  border-radius: 50%;
+  border-width: 2px;
+  border-style: solid;
+  border-color: white;
+  style:solid;
+  margin:5px;
+  display: inline-block;
+}
+
+a.icon-circle:link, a.icon-circle:visited {
+  color: #0d87b5;
+}
+
+a.icon-circle:active, a.icon-circle:hover {
+  background: none;
+  border-width: 2px;
+  color: white;
+}
+
+.icon-cirle-icon{
+  text-align: center;
+  margin: auto auto;
+  vertical-align: middle;
+  font-size: 17px;
+}
 
 /*ALIGNMENT and SPACING*/
 .center-elements{
