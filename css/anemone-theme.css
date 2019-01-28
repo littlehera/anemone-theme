@@ -386,6 +386,7 @@ a.icon-circle:active, a.icon-circle:hover {
   background: none;
   border-width: 2px;
   color: white;
+  transition: background ease-in 0.1s;
 }
 
 .icon-cirle-icon{
