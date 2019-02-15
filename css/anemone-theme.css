@@ -342,6 +342,10 @@ th{
   opacity:0;
 }
 
+.thick-padding{
+  padding: 25px 25px;
+}
+
 /*Icons and other Elements*/
 
 .email{
@@ -367,25 +371,26 @@ th{
   padding: 10px;
   width: 50px;
   height: 50px;
-  background:white;
+  background:#ffffffde;
   text-align: center;
   border-radius: 50%;
   border-width: 2px;
   border-style: solid;
-  border-color: white;
+  border-color:#ffffffde;
   style:solid;
-  margin:5px;
+  margin:9px;
   display: inline-block;
 }
 
 a.icon-circle:link, a.icon-circle:visited {
-  color: #0d87b5;
+  color: #0b2d3aa8;
 }
 
 a.icon-circle:active, a.icon-circle:hover {
   background: none;
   border-width: 2px;
   color: white;
+  border-color:white;
   transition: background ease-in 0.1s;
 }
 
@@ -454,6 +459,7 @@ textarea{
   border-radius: 3px;
   border-color: white;
   background-color: white;
+  transition: background ease-in 0.1s;
 }
 
 .button-light{
@@ -466,6 +472,7 @@ textarea{
   color: #5895cb;
   background: none;
   border-color: #5895cb;
+  transition: background ease-in 0.1s;
 }
 
 /** COLUMN SIZING AND MEDIA QUERIES**/
